@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SkinTrack - Votre routine skincare personnalisée</title>
-  <!-- Lien correct vers styles.css -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -23,6 +22,8 @@
         <li><a href="#" class="btn-primary">Commencer</a></li>
       </ul>
     </nav>
+    <!-- Bouton de changement de thème -->
+    <button id="theme-toggle" class="theme-switcher">🌙 Mode sombre</button>
   </header>
 
   <!-- Section Hero -->
@@ -54,6 +55,35 @@
     </ol>
   </section>
 
+  <!-- Générateur de routine -->
+  <section id="routine-generator">
+    <h2>Générez votre routine personnalisée</h2>
+    <form id="skincare-form">
+      <label for="skin-type">Type de peau :</label>
+      <select name="skin-type" id="skin-type" required>
+        <option value="sèche">Sèche</option>
+        <option value="grasse">Grasse</option>
+        <option value="mixte">Mixte</option>
+        <option value="sensible">Sensible</option>
+      </select>
+
+      <fieldset>
+        <legend>Vos objectifs :</legend>
+        <label><input type="checkbox" name="goals" value="acne" /> Réduire l’acné</label>
+        <label><input type="checkbox" name="goals" value="hydration" /> Hydratation</label>
+        <label><input type="checkbox" name="goals" value="glow" /> Éclat</label>
+      </fieldset>
+
+      <button type="submit">Voir ma routine</button>
+    </form>
+  </section>
+
+  <!-- Résultats -->
+  <section id="results" style="display: none;">
+    <h2>Votre routine recommandée</h2>
+    <ul id="routine-output"></ul>
+  </section>
+
   <!-- Tarifs -->
   <section id="pricing">
     <h2>Nos offres</h2>
@@ -75,36 +105,8 @@
       <li><a href="#">Confidentialité</a></li>
     </ul>
   </footer>
-  <script src="script.js">
-    <form id="skincare-form">
-      <label for="skin-type">Type de peau :</label>
-      <select name="skin-type" id="skin-type" required>
-        <option value="sèche">Sèche</option>
-        <option value="mixte">Mixte</option>
-        <option value="grasse">Grasse</option>
-        <option value="sensible">Sensible</option>
-      </select>
 
-      <fieldset>
-        <legend>Objectifs :</legend>
-        <label><input type="checkbox" name="goals" value="acne"> Réduire l'acné</label>
-          <label><input type="checkbox" name="goals" value="hydration"> Hydrater</label>
-            <label><input type="checkbox" name="goals" value="glow"> Éclat</label>
-    </fieldset>
-
-            <button type="submit">Générer ma routine</button>
-  </form>
-
-          <section id="results" style="display: none;">
-            <h2>🎯 Routine recommandée :</h2>
-            <ul id="routine-output"></ul>
-          </section>
-
-          <button id="theme-toggle">🌙 Mode sombre</button>
-
-
-  </script>
-
+  <script src="script.js"></script>
 </body>
 
 </html>
