@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkinTrack - Votre routine skincare personnalisée</title>
+  <!-- Lien correct vers styles.css -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Header de navigation -->
+  <header>
+    <nav>
+      <div class="logo">SkinTrack</div>
+      <ul>
+        <li><a href="#features">Fonctionnalités</a></li>
+        <li><a href="#how-it-works">Comment ça marche</a></li>
+        <li><a href="#pricing">Tarifs</a></li>
+        <li><a href="#">Connexion</a></li>
+        <li><a href="#" class="btn-primary">Commencer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Section Hero -->
+  <section class="hero">
+    <h1>Votre peau. Vos produits. Votre routine.</h1>
+    <p>Gérez et améliorez votre routine skincare avec un outil simple, intelligent et 100% personnalisé.</p>
+    <a href="#" class="btn-primary">Créer un compte</a>
+  </section>
+
+  <!-- Fonctionnalités -->
+  <section id="features">
+    <h2>Fonctionnalités clés</h2>
+    <ul class="features-grid">
+      <li><strong>Routine Matin/Soir</strong><br>Suivi personnalisé de vos soins.</li>
+      <li><strong>Analyse INCI</strong><br>Compréhension des ingrédients.</li>
+      <li><strong>Journal de peau</strong><br>Notez vos impressions jour après jour.</li>
+      <li><strong>Rappels</strong><br>Ne ratez plus une application.</li>
+    </ul>
+  </section>
+
+  <!-- Comment ça marche -->
+  <section id="how-it-works">
+    <h2>Comment ça marche ?</h2>
+    <ol>
+      <li>Créez votre profil peau</li>
+      <li>Ajoutez vos produits</li>
+      <li>Suivez votre routine</li>
+      <li>Analysez votre évolution</li>
+    </ol>
+  </section>
+
+  <!-- Tarifs -->
+  <section id="pricing">
+    <h2>Nos offres</h2>
+    <div class="pricing-card">
+      <h3>Gratuit</h3>
+      <p>3 produits max, suivi basique</p>
+    </div>
+    <div class="pricing-card premium">
+      <h3>Premium – 4,99€/mois</h3>
+      <p>Fonctionnalités avancées, analyse illimitée</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SkinTrack. Tous droits réservés.</p>
+    <ul>
+      <li><a href="#">Mentions légales</a></li>
+      <li><a href="#">Confidentialité</a></li>
+    </ul>
+  </footer>
+  <script src="script.js">
+    <form id="skincare-form">
+      <label for="skin-type">Type de peau :</label>
+      <select name="skin-type" id="skin-type" required>
+        <option value="sèche">Sèche</option>
+        <option value="mixte">Mixte</option>
+        <option value="grasse">Grasse</option>
+        <option value="sensible">Sensible</option>
+      </select>
+
+      <fieldset>
+        <legend>Objectifs :</legend>
+        <label><input type="checkbox" name="goals" value="acne"> Réduire l'acné</label>
+          <label><input type="checkbox" name="goals" value="hydration"> Hydrater</label>
+            <label><input type="checkbox" name="goals" value="glow"> Éclat</label>
+    </fieldset>
+
+            <button type="submit">Générer ma routine</button>
+  </form>
+
+          <section id="results" style="display: none;">
+            <h2>🎯 Routine recommandée :</h2>
+            <ul id="routine-output"></ul>
+          </section>
+
+          <button id="theme-toggle">🌙 Mode sombre</button>
+
+
+  </script>
+
+</body>
+
+</html>
